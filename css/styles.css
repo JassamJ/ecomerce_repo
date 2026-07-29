@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+label {
+  margin-left: 12px;
+}
+
+/* Margen para el elemento "Show entries" */
+.dataTables_length {
+  margin-bottom: 18px !important;
+}
+
+/* Margen para el elemento "Search" */
+.dataTables_filter {
+  margin-bottom: 18px !important;
+}
+
+.card-header {
+  padding-top: 10px !important;
+  background-color: #222222 !important;
+  color: #ffffff !important;
+}
+
+.dataTable {
+  border-top: 1px solid #c7c7c7 !important;
+}
+
+.img-card-container pre {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+pre {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.img-card-container img {
+  width: 100%;
+  object-fit: cover;
+  height: 310px;
+}
+
+/* Estenedor principal de productos */
+#productList {
+  min-height: 400px;
+  align-content: flex-start;
+  /* Evita que los items se estiren si hay pocos */
+}
+
+/* Ajuste para las tarjetas de producto */
+.product-item {
+  transition: opacity 0.3s ease;
+  padding: 3px !important;
+}
+
+.product-item h5 {
+  font-size: 18px;
+}
+
+.product-item p {
+  font-size: 12px;
+}
+
+/* La columna de filtros (Sidebar) */
+.category_list {
+  /* background: #fff; */
+  padding: 20px;
+  /* border-radius: 8px; */
+  max-height: 90vh;
+  /* Para que no se pierda el scroll */
+  position: sticky;
+  top: 100px;
+  height: calc(100%);
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+
+.category_list label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: #444;
+}
+
+.category_list label:hover {
+  color: #dc3545;
+  /* Color rojo de tu botón */
+}
+
+.category_list input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Buscador */
+#searchInput {
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  padding-left: 15px;
+}
+
+#searchInput:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+  border-color: #dc3545;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -45px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  display: none;
+
+}
+
+.slick-dots li:before {
+  top: 1px;
+  transition: all 0.5s;
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #e0e0e0;
+  position: absolute;
+  border-radius: 55px;
+}
+
+.slick-dots li.slick-active:before {
+  top: 0;
+  width: 6px;
+  height: 6px;
+  margin-left: -2px;
+  background-color: #8a8a8a;
+}
+
+.slick-prev {
+  left: -4%;
+  transform: rotate(180deg);
+}
+
+.slick-next {
+  right: -4%;
+  margin-left: 15px;
+}
+
+.slick-arrow {
+  top: 42%;
+  height: 26px;
+  width: 14px;
+  position: absolute;
+  font-size: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  background-image: url(https://tarkikromanski.github.io/files/arrow-slider.png);
+  background-repeat: no-repeat;
+  filter: invert(30%);
+}
+
+.slickc {
+  color: #ffffff;
+  margin: 0px 5px;
+}
+
+.slickc img {
+  height: 110px !important;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slickimg img {
+  height: 100% !important;
+  width: 100%;
+  object-fit: contain;
+}
+
+.fichaTec {
+  width: 200px;
+  display: block;
+}
+
+/* Estilos para el botón flotante */
+.floating-button {
+  position: fixed;
+  bottom: 15px;
+  left: 20px;
+  background-color: #213443;
+  /* Cambia el color de fondo a tu preferencia */
+  color: white;
+  padding: 10px 15px 10px 10px;
+  border-radius: 50px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.floating-button a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Slider de Subcategorías */
+.subcategory-slider .slick-list {
+  margin: 0 -10px;
+}
+
+.sub-card {
+  height: 160px;
+  background: #fff;
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.sub-card img {
+  max-height: 110px;
+  /* limita la imagen */
+  width: auto;
+  object-fit: contain;
+  /* NO se deforma */
+}
+
+.sub-card:hover {
+  border-color: #dc3545;
+  background-color: #fff8f8;
+}
+
+/* Estado cuando la subcategoría está seleccionada */
+.sub-card.active {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+.sub-card i {
+  font-size: 1.5rem;
+}
+
+.subliststyle {
+  padding-right: 5px;
+}
+
+.btn .add-text {
+  transition: all 0.2s ease;
+}
+
+.table-cart {
+  font-size: 14px;
+}
+
+.card-buy h5 {
+  font-size: 15px;
+}
+
+.card-buy p {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1000px) {
+  .fichaTec {
+    width: 250px;
+    display: block;
+  }
+
+  .card-contain {
+    background-color: #f5f5f5;
+    z-index: 999;
+  }
+
+  .product-item h5 {
+    font-size: 14px;
+  }
+
+  .product-item p {
+    font-size: 10px;
+  }
+
+  .img-card-container img {
+    height: 200px;
+  }
+
+  .subcategory-slider {
+    padding-top: 10px;
+  }
+
+  .card-buy h5 {
+    font-size: 12px;
+  }
+
+  .card-buy p {
+    font-size: 10px;
+  }
+
+}

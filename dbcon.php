@@ -4,12 +4,11 @@ $user = "root";
 $password = "";
 $database = "ecommerce";
 
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$database;charset=utf8", $user, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-   
-} catch (PDOException $e) {
-    die("Error de conexión: " . $e->getMessage());
+$con = mysqli_connect($host, $user, $password, $database);
+
+if (!$con) {
+    die("Error de conexión: " . mysqli_connect_error());
 }
+
+mysqli_set_charset($con, "utf8");
 ?>

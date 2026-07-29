@@ -1,0 +1,13 @@
+{
+    "name": "jassa/ecommerce",
+    "autoload": {
+        "psr-4": {
+            "Jassa\\Ecommerce\\": "src/"
+        }
+    },
+    "require": {
+        "dompdf/dompdf": "^3.1",
+        "openpay/sdk": "^3.1",
+        "phpmailer/phpmailer": "^7.1"
+    }
+}
