@@ -137,13 +137,13 @@ while ($stmtVentas->fetch()) {
 
     <script type="text/javascript">
         const OPENPAY_ID = "<?php echo $_ENV['OPENPAY_ID']; ?>";
-        const OPENPAY_PK = "";
+        const OPENPAY_PK = "<?php echo $_ENV['OPENPAY_PK']; ?>";
 
         $(document).ready(function() {
 
             OpenPay.setId(OPENPAY_ID);
             OpenPay.setApiKey(OPENPAY_PK);
-            OpenPay.setSandboxMode(false);
+            OpenPay.setSandboxMode(true);
             var deviceSessionId = OpenPay.deviceData.setup("payment-form", "deviceIdHiddenFieldName");
 
             // Ajuste en el click del botón para no pedir token si es transferencia
